@@ -1,0 +1,58 @@
+
+
+  .container{
+  background-color: lightpink;
+color: rgb(110, 0, 92);
+border:2px Solid rgb(74, 2, 63);
+padding: 50px;
+margin: 10px;
+padding-bottom:  px;
+
+  }
+row moves across x-axis
+column moves in y-axis
+
+  .grid {  
+   display: flex;
+    flex-direction:row;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    align-items:start;
+  }
+
+.btn {
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+}
+ 
+.primary-btn {
+    background-color: rgb(237, 7, 183);
+    color: white;
+    border: transparent solid 2px;
+    transition: ease-in-out 0.15s;
+}
+.primary-btn:hover {
+    background-color: #f073ce;
+}
+
+.primary-btn:active {
+    background-color: rgb(94, 10, 63);
+}
+
+
+.secondary-btn {
+    background-color: rgb(226, 76, 123);
+     color: white;
+    border: transparent solid 2px;
+    transition: ease-in-out 0.15s;
+}
+.secondary-btn:hover {
+    /*background-color: lightgray;*/
+    text-decoration: underline;
+}
+
+.secondary-btn:active {
+    background-color: black;
+    color: white;
+}
