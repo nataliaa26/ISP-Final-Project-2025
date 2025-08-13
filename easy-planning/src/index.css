@@ -48,9 +48,9 @@ column moves in y-axis
     transition: ease-in-out 0.15s;
 }
 .secondary-btn:hover {
-    /*background-color: lightgray;*/
-    text-decoration: underline;
+   background-color: rgb(94, 10, 63);
 }
+
 
 .secondary-btn:active {
     background-color: black;

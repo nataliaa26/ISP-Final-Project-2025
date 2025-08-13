@@ -4,16 +4,32 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [username, setUsername] = useState("");
 
   const [tasks, setTasks] = useState(["walk dog", "do hw", "Clean room"]);
 
-  function getUsername(e) {
-    setUsername(e.target.value);
+  const [incomingTask, setIncomingTask] = useState("");
+
+  function updateTasks() {
+    let dummyList = tasks;
+    dummyList.push(incomingTask);
+    setTasks(dummyList);
+    console.log(tasks);
+  }
+
+  function handleInput(e) {
+    setIncomingTask(e.target.value);
   }
 
   return (
     <>
+      <input type="text" placeholder="type here" onChange={handleInput} />
+      <button Type="submit" onClick={updateTasks}>
+        submit
+      </button>
+      {tasks.map((task, index) => (
+        <h3 key={index}>{task}</h3>
+      ))}
+
       <div className="container grid">
         <h1>
           <p>Welcome To Easy Planning</p>
@@ -23,7 +39,9 @@ function App() {
         </h3>
         <h3>
           {" "}
-          <button className="btn secondary-btn"  type="button">Menu </button>{" "}
+          <button className="btn secondary-btn" type="button">
+            Menu{" "}
+          </button>{" "}
         </h3>
         <ul>
           <li>
@@ -63,20 +81,17 @@ function App() {
             <li> </li>
           </ul>
         </ul>{" "}
-        <input
+        {/* <input
           placeholder="type your task here"
           type="task"
-          onChange= {getUsername}
-/>
-
-<button className="btn primary-btn" type="button">add  task </button>
-
-
-
-        <h3>{username}</h3>
-        <input type="checkbox" />
-         {tasks.map((task) => (
-        <h3>{task}</h3>
+          onChange={setIncomingTask}
+        /> */}
+        <button className="btn primary-btn" type="button">
+          add task{" "}
+        </button>
+        {/* <h3>{username}</h3> */}
+        {tasks.map((task) => (
+          <h3>{task}</h3>
         ))}
       </div>
     </>
